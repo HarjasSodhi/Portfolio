@@ -1,16 +1,28 @@
+import { useState } from "react"
+
+
 function Nav() {
+    const [vis, setVis] = useState('full');
+
+    function handleVis() {
+        setVis(vis === 'full' ? 'none' : 'full');
+    }
+
     return (
-        <div className='flex justify-between items-center bg-gray-800 text-white text-sm'>
-            <div className="logo m-5 text-lg text-[#64ffda] font-bold">HarjasSodhi</div>
-            <div className="links flex items-center">
-                <div className="link m-5 hover:text-[#64ffda] transition ease 0.5s"><span className="text-[#64ffda]">01. </span><a className="font-bold" href="#about">About</a></div>
-                <div className="link m-5 hover:text-[#64ffda] transition ease 0.5s"><span className="text-[#64ffda]">02. </span><a className="font-bold" href="#about">Experience</a></div>
-                <div className="link m-5 hover:text-[#64ffda] transition ease 0.5s"><span className="text-[#64ffda]">03. </span><a className="font-bold" href="#about">Education</a></div>
-                <div className="link m-5 hover:text-[#64ffda] transition ease 0.5s"><span className="text-[#64ffda]">04. </span><a className="font-bold" href="#about">Projects</a></div>
-                <div className="link m-5 hover:text-[#64ffda] transition ease 0.5s"><span className="text-[#64ffda]">05. </span><a className="font-bold" href="#about">Contact</a></div>
-                <div className="link m-5 text-[#64ffda]"><button className="resume-btn font-bold border border-[#64ffda] rounded px-5 py-2 hover:bg-gray-700 transition ease 0.5s">Resume</button></div>
+        <>
+            <div className='fixed w-screen top-0 z-10 flex justify-between items-center bg-[#0a192f] text-white text-sm'>
+                <div className="logo m-4 text-lg text-[#64ffda] font-bold">HarjasSodhi</div>
+                <div className="absolute text-[#64ffda] z-30 top-0 right-0 nav-toggle md:hidden m-5 text-2xl" onClick={handleVis}><i className="fa-solid fa-bars"></i></div>
+                <div className={`transform translate-x-${vis} md:transform-none transition ease 0.5s opacity-90 shadow-2xl md:shadow-none shadow-black fixed flex text-xl md:text-sm flex-col justify-center items-center top-0 right-0 z-20 h-screen w-2/4 md:h-fit md:w-fit bg-[#112240] md:bg-inherit md:static md:flex-row links md:items-center`}>
+                    <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center"><span className="text-[#64ffda] block md:inline">01. </span><a className="font-bold" href="#about">About</a></div>
+                    <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center"><span className="text-[#64ffda] block md:inline">02. </span><a className="font-bold" href="#experience">Experience</a></div>
+                    <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center"><span className="text-[#64ffda] block md:inline">03. </span><a className="font-bold" href="#education">Education</a></div>
+                    <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center"><span className="text-[#64ffda] block md:inline">04. </span><a className="font-bold" href="#projects">Projects</a></div>
+                    <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center"><span className="text-[#64ffda] block md:inline">05. </span><a className="font-bold" href="#contact">Contact</a></div>
+                    <div className="link m-3 text-[#64ffda]"><a className="resume-btn font-bold border border-[#64ffda] rounded px-5 py-2 hover:bg-gray-700 transition ease 0.5s" href="/Harjas-Sodhi-Resume.pdf">Resume</a></div>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
