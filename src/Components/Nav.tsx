@@ -15,11 +15,13 @@ function Nav() {
             let currY = window.scrollY;
             if (navRef.current) {
                 if (currY <= scroll) {
+                    console.log("scroll up");
                     if (!vis) {
                         navRef.current.classList.remove("-translate-y-full");
                         navRef.current.classList.add('translate-y-none');
                     }
                 } else {
+                    console.log("scroll down");
                     if (!vis) {
                         navRef.current.classList.remove('translate-y-none');
                         navRef.current.classList.add("-translate-y-full");

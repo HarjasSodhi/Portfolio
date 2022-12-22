@@ -1,7 +1,7 @@
 import './App.css'
 import Nav from './Components/Nav'
 import SocialsBar from './Components/SocialsBar'
-
+import Content from './Components/Content'
 
 function App() {
 
@@ -9,6 +9,7 @@ function App() {
     <>
       <Nav />
       <SocialsBar />
+      <Content />
     </>
   )
 }
