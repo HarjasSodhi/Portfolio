@@ -61,10 +61,10 @@ body {
 
 .imagediv {
   filter: drop-shadow(15px 15px 0px #64ffda);
-  transition: all linear 0.3s;
+  transition: all linear 0.2s;
 }
 
 .imagediv:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   filter: drop-shadow(10px 10px 0px #64ffda);
 }

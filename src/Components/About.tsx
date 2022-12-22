@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div className='h-screen xl:px-12' id='about'>
+        <div className='min-h-screen xl:px-12' id='about'>
             <div className=" text-[#ccd6f6] flex items-end">
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>01.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" > About Me</div>
@@ -26,7 +26,7 @@ function About() {
                         </ul>
                     </p>
                 </div>
-                <div className="imagediv mt-14 md:mt-0 md:ml-20 h-50 w-80 transition ease"><img className="h-full w-full" src="https://brittanychiang.com/static/30a645f7db6038f83287d0c6042d3b2b/f9526/me.avif" alt="" /></div>
+                <div className="imagediv mt-14 md:mt-0 md:ml-20 h-50 w-80 transition ease"><img className="h-30 w-30" src="/headshot.jpg" alt="" /></div>
             </div>
         </div>
     )
