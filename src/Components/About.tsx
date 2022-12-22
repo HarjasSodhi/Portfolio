@@ -26,7 +26,7 @@ function About() {
                         </ul>
                     </p>
                 </div>
-                <div className="mt-14 md:mt-0 md:ml-20 h-50 w-80 transition ease"><img className="h-full w-full" src="https://brittanychiang.com/static/30a645f7db6038f83287d0c6042d3b2b/f9526/me.avif" alt="" /></div>
+                <div className="imagediv mt-14 md:mt-0 md:ml-20 h-50 w-80 transition ease"><img className="h-full w-full" src="https://brittanychiang.com/static/30a645f7db6038f83287d0c6042d3b2b/f9526/me.avif" alt="" /></div>
             </div>
         </div>
     )
