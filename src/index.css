@@ -2,7 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #0a192f;
   overflow-x: hidden;
+}
+
+.un {
+  background-image: linear-gradient(#64ffda 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.un:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+.skills li::before {
+  content: "\00BB";
+  margin-right: 5px;
+  color: #64ffda;
+}
+
+.skills li:hover {
+  color: #64ffda;
+}
+
+.skills li {
+  transition: all linear 0.3s;
 }
