@@ -12,7 +12,7 @@ function Experience() {
             link: "https://kyloapps.com",
             startDate: "February 2022",
             endDate: "April 2022",
-            bullets: ["Skills- NodeJS, ExpressJS, REST, MongoDB, Google Cloud, etc", "Write modern, performant, maintainable code for a diverse array of clients and integratingit with Databases for 4+ Projects", "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis"]
+            bullets: ["Skills- NodeJS, ExpressJS, REST, MongoDB, Google Cloud, etc", "Write modern, performant, maintainable code for a diverse array of clients and integrating it with databases for 4+ Projects", "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis"]
         },
         {
             position: "Software Developer Trainee",
