@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <div className='text-white w-full pt-16 h-screen' >
+        <div className='text-white pt-16 min-h-screen' >
             <div className='text-[#64ffda] tracking-widest'>Hi, my name is</div>
             <div className='name font-bold'>Harjas Sodhi.</div>
             <div className='lg:text-7xl md:text-5xl text-3xl my-3 text-[#8892b0] font-bold'>I build things for the web.</div>

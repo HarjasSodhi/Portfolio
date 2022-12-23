@@ -68,3 +68,29 @@ body {
   transform: scale(1.02);
   filter: drop-shadow(10px 10px 0px #64ffda);
 }
+
+.text-red {
+  color: red;
+  font-weight: bold;
+}
+
+.text-yellow {
+  color: yellow;
+  font-weight: bold;
+}
+
+.text-blue {
+  color: blue;
+  font-weight: bold;
+}
+
+.text-green {
+  color: green;
+  font-weight: bold;
+}
+
+.bar-content li::before {
+  content: "\00BB";
+  margin-right: 10px;
+  color: #64ffda;
+}
