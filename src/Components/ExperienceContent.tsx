@@ -12,7 +12,7 @@ function ExperienceContent(props: propType) {
             <div className="mt-1 text-[#a8b2d1]">{props.el.startDate} - {props.el.endDate}</div>
             <ul className="mt-8 text-[#a8b2d1]">
                 {
-                    props.el.bullets.map(e => <li className="mt-8">{e}</li>)
+                    props.el.bullets.map(e => <li className="mt-6">{e}</li>)
                 }
             </ul>
         </div>

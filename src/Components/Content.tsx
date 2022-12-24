@@ -1,6 +1,7 @@
 import About from "./About"
 import Experience from "./Experience"
 import Hero from "./Hero"
+import Projects from "./Projects"
 
 function Content() {
     return (
@@ -8,6 +9,7 @@ function Content() {
             <Hero />
             <About />
             <Experience />
+            <Projects />
         </div>
     )
 }
