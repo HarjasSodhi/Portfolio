@@ -18,13 +18,13 @@ function Projects() {
                     <div className="md:absolute right-0 md:z-10 md:w-1/2 my-5 text-[#a8b2d1] md:text-right" >
                         <div className="md:p-5 md:shadow-md shadow-black md:bg-[rgb(2,12,27)] md:opacity-90 md:text-[#a8b2d1] text-[#ccd6f6] text-sm">A full stack online meal plan booking website project with modern and responsive UI and dynamic content with features like adding ratings, reviews, online payment using Razorpay Gateway, viewing/cancelling past orders and user authentication features like login, signup, forgot /reset password</div>
                         <div className="text-[#64ffda] mt-5 flex md:justify-end flex-wrap text-sm tracking-wider">
-                            <div className="ml-4">React</div>
+                            <div className="md:ml-4">React</div>
                             <div className="ml-4">NodeJS</div>
                             <div className="ml-4">MongoDB</div>
                             <div className="ml-4">Bootstrap</div>
                             <div className="ml-4">Razorpay</div>
                         </div>
-                        <div className="flex md:justify-end text-[#a8b2d1] mt-8">
+                        <div className="md:justify-end text-[#a8b2d1] mt-8 inline-block p-5 md:border-b-4 border-white hover:border-[#64ffda] transition">
                             <a href="https://github.com/HarjasSodhi/GetChef-d---MERN-Stack" target='_blank' className="text-2xl md:m-2 hover:text-[#64ffda] transition ease">
                                 <i className="fa-brands fa-github"></i>
                             </a>
@@ -49,7 +49,7 @@ function Projects() {
                             <div className="mr-4">CSS</div>
                             <div className="mr-4">JavaScript</div>
                         </div>
-                        <div className="flex text-[#a8b2d1] mt-8">
+                        <div className="text-[#a8b2d1] mt-8 md:border-b-4 border-white inline-block p-5 hover:border-[#64ffda] transition">
                             <a href="https://github.com/HarjasSodhi/Random-Color-Generator" target='_blank' className="text-2xl md:m-2 hover:text-[#64ffda] transition ease">
                                 <i className="fa-brands fa-github"></i>
                             </a>

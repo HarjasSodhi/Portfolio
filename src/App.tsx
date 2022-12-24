@@ -10,6 +10,7 @@ function App() {
       <Nav />
       <SocialsBar />
       <Content />
+      {/* <MarkdownPreview source={m} warpperElement={{ "data-color-mode": "dark" }} /> */}
     </>
   )
 }
