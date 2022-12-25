@@ -53,7 +53,8 @@ function Nav() {
                 <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">01. </span><a className="font-bold" href="#about">About</a></div>
                 <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">02. </span><a className="font-bold" href="#experience">Work & Education</a></div>
                 <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">03. </span><a className="font-bold" href="#projects">Projects</a></div>
-                <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">04. </span><a className="font-bold" href="#contact">Contact</a></div>
+                <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">04. </span><a className="font-bold" href="#blogs">Blogs</a></div>
+                <div className="link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">05. </span><a className="font-bold" href="#contact">Contact</a></div>
                 <div className="link m-3 text-[#64ffda]" onClick={handleSectionClick}><a className="resume-btn font-bold border border-[#64ffda] rounded px-5 py-2 hover:bg-gray-700 transition ease 0.5s" href="/Harjas-Sodhi-Resume.pdf" target='_blank'>Resume</a></div>
             </div>
         </div>

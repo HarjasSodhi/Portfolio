@@ -1,6 +1,16 @@
 import ProjectCard from "./ProjectCard"
+import { proj } from '../types'
+import { useState } from "react";
 
 function Projects() {
+    let data: proj[] = [1, 2, 3];
+
+    const [disp, setDisp] = useState(false)
+
+    function handleDisp() {
+        setDisp(!disp);
+    }
+
     return (
         <div className="pt-8 flex flex-col min-h-screen xl:px-8 mt-20" id='projects'>
             <div className=" text-[#ccd6f6] flex items-end">
@@ -60,6 +70,17 @@ function Projects() {
                     </div>
                 </div>
                 <a href='https://harjassodhi.github.io/Random-Color-Generator/' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/rcg.png" /></a>
+            </div>
+            <div className="flex flex-col items-center xl:mt-24 lg:mt-36 mt-52 font-bold">
+                <div className="text-2xl text-[#ccd6f6]">Other Noteworthy Projects</div>
+                <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1">
+                    {
+                        data.map((el, idx) => {
+                            return <ProjectCard el={el} dis={disp || idx < 3} />
+                        })
+                    }
+                </div>
+                <button onClick={handleDisp} className="mt-8 font-bold border text-[#64ffda] border-[#64ffda] rounded p-4 hover:bg-gray-700 transition ease 0.5s">{disp ? "Show Less" : "Show More"}</button>
             </div>
         </div>
     )

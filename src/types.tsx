@@ -6,3 +6,7 @@ export type exp = {
     endDate: string,
     bullets: string[]
 }
+
+export type proj = {
+    
+}
