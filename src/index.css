@@ -95,6 +95,12 @@ body {
   color: #64ffda;
 }
 
-.wmde-markdown{
+.wmde-markdown {
   padding: 3rem 5rem 3rem 5rem;
+}
+
+@media (min-width: 640px) {
+  .wmde-markdown {
+    padding: 2rem;
+  }
 }
