@@ -99,7 +99,7 @@ body {
   padding: 3rem 5rem 3rem 5rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .wmde-markdown {
     padding: 2rem;
   }
