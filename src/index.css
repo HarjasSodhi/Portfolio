@@ -104,3 +104,7 @@ body {
     padding: 2rem;
   }
 }
+
+.card:hover .card-name {
+  color: #64ffda;
+}

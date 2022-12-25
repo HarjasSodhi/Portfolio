@@ -1,12 +1,22 @@
 import ProjectCard from "./ProjectCard"
 import { proj } from '../types'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Projects() {
-    let data: proj[] = [1, 2, 3];
+    let data: proj[] = [1, 2, 3, 4, 5, 6];
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth < 1280 && window.innerWidth > 640) setDispSize(4);
+            else setDispSize(3);
+        }
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, [])
 
     const [disp, setDisp] = useState(false)
-
+    const [dispSize, setDispSize] = useState(window.innerWidth < 1280 && window.innerWidth > 640 ? 4 : 3);
     function handleDisp() {
         setDisp(!disp);
     }
@@ -71,16 +81,16 @@ function Projects() {
                 </div>
                 <a href='https://harjassodhi.github.io/Random-Color-Generator/' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/rcg.png" /></a>
             </div>
-            <div className="flex flex-col items-center xl:mt-24 lg:mt-36 mt-52 font-bold">
+            <div className="flex flex-col items-center xl:mt-24 lg:mt-36 md:mt-52 mt-8 font-bold">
                 <div className="text-2xl text-[#ccd6f6]">Other Noteworthy Projects</div>
-                <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1">
+                <div className="mt-14 place-content-evenly w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                     {
                         data.map((el, idx) => {
-                            return <ProjectCard el={el} dis={disp || idx < 3} />
+                            return <ProjectCard el={el} dis={disp || idx < dispSize} />
                         })
                     }
                 </div>
-                <button onClick={handleDisp} className="mt-8 font-bold border text-[#64ffda] border-[#64ffda] rounded p-4 hover:bg-gray-700 transition ease 0.5s">{disp ? "Show Less" : "Show More"}</button>
+                <button onClick={handleDisp} className="mt-10 font-bold border text-[#64ffda] border-[#64ffda] rounded p-4 hover:bg-gray-700 transition ease 0.5s">{disp ? "Show Less" : "Show More"}</button>
             </div>
         </div>
     )
