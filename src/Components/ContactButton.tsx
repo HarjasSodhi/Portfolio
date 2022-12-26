@@ -27,8 +27,7 @@ function ContactButton() {
                     Swal.showValidationMessage(`Please enter a valid Email`)
                     return;
                 }
-                console.log(import.meta.env);
-                console.log(import.meta.env.VITE_publicKey);
+                
                 return emailjs.sendForm(import.meta.env.VITE_emailKey, 'contact_form', form, import.meta.env.VITE_publicKey).catch(err => {
                     Swal.showValidationMessage(
                         `Some error has occurred. Please reach out to me at harjassodhi9@gmail.com`
