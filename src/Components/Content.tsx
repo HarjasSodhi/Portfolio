@@ -1,7 +1,9 @@
 import About from "./About"
+import Blogs from "./Blogs"
 import Experience from "./Experience"
 import Hero from "./Hero"
 import Projects from "./Projects"
+import Contact from "./Contact"
 
 function Content() {
     return (
@@ -10,6 +12,8 @@ function Content() {
             <About />
             <Experience />
             <Projects />
+            <Blogs />
+            <Contact />
         </div>
     )
 }

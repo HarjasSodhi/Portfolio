@@ -6,7 +6,7 @@ function Projects() {
     let data: proj[] = [1, 2, 3, 4, 5, 6];
     useEffect(() => {
         function handleResize() {
-            if (window.innerWidth < 1280 && window.innerWidth > 640) setDispSize(4);
+            if (window.innerWidth < 1280 && window.innerWidth > 640) setDispSize(2);
             else setDispSize(3);
         }
         window.addEventListener('resize', handleResize);
@@ -16,7 +16,7 @@ function Projects() {
     }, [])
 
     const [disp, setDisp] = useState(false)
-    const [dispSize, setDispSize] = useState(window.innerWidth < 1280 && window.innerWidth > 640 ? 4 : 3);
+    const [dispSize, setDispSize] = useState(window.innerWidth < 1280 && window.innerWidth > 640 ? 2 : 3);
     function handleDisp() {
         setDisp(!disp);
     }
