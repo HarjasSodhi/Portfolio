@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
 import './logo.css'
 
-function LogoLoader() {
+type propType = {
+  setDisp: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function LogoLoader(props: propType) {
 
   useEffect(() => {
     let paths: any[] | NodeList = document.querySelectorAll("#svg path");
@@ -15,11 +19,25 @@ function LogoLoader() {
     for (let i = 0; i < paths.length; i++) {
       (paths[i] as any).style.animation = "lineAnim 2s ease-in-out forwards";
     }
+
+    function hanldeAnimationEnd() {
+      timeout = setTimeout(() => {
+        props.setDisp(true);
+      }, 1000);
+    }
+
+    let timeout: any;
+    svg.addEventListener('animationend', hanldeAnimationEnd);
+
+    return () => {
+      clearTimeout(timeout);
+      svg.removeEventListener('animationend', hanldeAnimationEnd);
+    }
   }, [])
 
 
   return (
-    <div className="p-8 h-screen w-screen flex justify-center items-center">
+    <div className="p-5 h-screen w-screen flex justify-center items-center">
       <svg id="svg" width="100%" height="100%" viewBox="0 0 1070 136" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M71.592 10.784V100H59.944V59.552H14.504V100H2.85596V10.784H14.504V49.952H59.944V10.784H71.592Z" stroke="white" stroke-width="5" />
         <path d="M87.129 64.672C87.129 57.504 88.5796 51.232 91.481 45.856C94.3823 40.3947 98.3503 36.1706 103.385 33.184C108.505 30.1973 114.18 28.704 120.409 28.704C126.553 28.704 131.886 30.0266 136.409 32.672C140.932 35.3173 144.302 38.6453 146.521 42.656V29.856H158.297V100H146.521V86.944C144.217 91.04 140.761 94.4533 136.153 97.184C131.63 99.8293 126.34 101.152 120.281 101.152C114.052 101.152 108.42 99.616 103.385 96.544C98.3503 93.472 94.3823 89.1626 91.481 83.616C88.5796 78.0693 87.129 71.7547 87.129 64.672ZM146.521 64.8C146.521 59.5093 145.454 54.9013 143.321 50.976C141.188 47.0506 138.286 44.064 134.617 42.016C131.033 39.8826 127.065 38.816 122.713 38.816C118.361 38.816 114.393 39.84 110.809 41.888C107.225 43.936 104.366 46.9227 102.233 50.848C100.1 54.7733 99.033 59.3813 99.033 64.672C99.033 70.048 100.1 74.7413 102.233 78.752C104.366 82.6773 107.225 85.7066 110.809 87.84C114.393 89.888 118.361 90.912 122.713 90.912C127.065 90.912 131.033 89.888 134.617 87.84C138.286 85.7066 141.188 82.6773 143.321 78.752C145.454 74.7413 146.521 70.0907 146.521 64.8Z" stroke="white" stroke-width="5" />
