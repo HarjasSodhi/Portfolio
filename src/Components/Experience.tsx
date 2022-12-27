@@ -12,6 +12,12 @@ function Experience() {
         triggerOnce: true,
     });
 
+    const [ref2, inView2, entry2] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
     let data: exp[] = [
         {
             position: "Backend Engineer Intern",
@@ -65,7 +71,7 @@ function Experience() {
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" >Work & Education</div>
                 <div className="grow border border-gray-700 self-center lg:grow-0 lg:w-1/3 ml-5"></div>
             </div>
-            <div className="viewer mt-10 sm:mt-24 flex flex-col sm:flex-row items-center sm:justify-between sm:items-start lg:px-20 sm:px-14 px-3 tracking-wider">
+            <div ref={ref2} className={`${inView2 ? 'animate-[fadeintranslatebottom_0.5s_ease_1s_forwards]' : ""} opacity-0 viewer mt-10 sm:mt-24 flex flex-col sm:flex-row items-center sm:justify-between sm:items-start lg:px-20 sm:px-14 px-3 tracking-wider`}>
                 <div className="bar sm:flex transition ease h-fit sm:w-fit w-full">
                     <div className='slide h-auto relative transition ease'>
                         <div className='slider w-[1px] bg-[#64ffda] absolute transition-all ease duration-500' ref={sliderRef}></div>

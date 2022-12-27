@@ -8,6 +8,11 @@ function Blogs() {
         threshold: 0.1,
         triggerOnce: true,
     });
+    const [ref2, inView2, entry2] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
 
     let data = ["Redux In React", "Render Props", "Custom Hooks", "Refs In React", "Import vs Require", "REST API"];
     return (
@@ -17,7 +22,7 @@ function Blogs() {
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold tracking-wide" > Blogs / Tutorials</div>
                 <div className="grow border border-gray-700 self-center lg:grow-0 lg:w-1/3 ml-5"></div>
             </div>
-            <div className='grow grid place-content-center lg:grid-cols-2 grid-cols-1 gap-5'>
+            <div ref={ref2} className={`grow grid place-content-center lg:grid-cols-2 grid-cols-1 gap-5 opacity-0 ${inView2 ? 'animate-[fadeintranslatebottom_0.5s_ease_1.5s_forwards]' : ""}`}>
                 {
                     data.map(el => {
                         return <BlogCard el={el} />

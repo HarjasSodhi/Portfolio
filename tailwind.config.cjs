@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        flywiseImg: 'linear-gradient(black, black),url(image-to-be-fake-filters.jpg)'
+      },
       keyframes: {
         fadein: {
           '0%': { opacity: '0' },
