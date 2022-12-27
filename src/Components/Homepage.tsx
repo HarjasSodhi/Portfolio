@@ -1,13 +1,15 @@
 import Nav from './Nav'
 import SocialsBar from './SocialsBar'
 import Content from './Content'
+import LogoLoader from "./logoLoader/LogoLoader"
 
 function Homepage() {
   return (
     <>
-      <Nav />
+      {/* <Nav />
       <SocialsBar />
-      <Content />
+      <Content /> */}
+      <LogoLoader/>
     </>
   )
 }
