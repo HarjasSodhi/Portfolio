@@ -1,6 +1,14 @@
+import { useInView } from 'react-intersection-observer';
+
 function About() {
+    const [ref, inView, entry] = useInView({
+        root: null,
+        threshold: 0,
+        triggerOnce: true,
+    });
+
     return (
-        <div className='pt-8 min-h-screen xl:px-10 mt-10' id='about'>
+        <div ref={ref} className={`pt-8 h-screen xl:px-10 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.5s_forwards]' : ""}`} id='about'>
             <div className=" text-[#ccd6f6] flex items-end">
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>01.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" > About Me</div>

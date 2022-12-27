@@ -43,10 +43,11 @@ body {
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-duration: 4s;
-  animation-name: backanim;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  animation-duration: 2s, 0.5s;
+  animation-name: backanim, fadeintranslatebottom;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 0s, 1s;
   font-size: 5rem;
 }
 

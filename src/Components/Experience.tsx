@@ -2,8 +2,15 @@ import { exp } from '../types';
 import { useState, useEffect, useRef } from 'react';
 import ExperienceContent from './ExperienceContent';
 import ExperienceTab from './ExperienceTab';
+import { useInView } from 'react-intersection-observer';
 
 function Experience() {
+
+    const [ref, inView, entry] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
 
     let data: exp[] = [
         {
@@ -52,7 +59,7 @@ function Experience() {
 
 
     return (
-        <div className="pt-8 flex flex-col min-h-screen xl:px-8 mt-20" id='experience'>
+        <div ref={ref} className={`pt-8 flex flex-col h-screen xl:px-8 mt-20 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.5s_forwards]' : ""}`} id='experience'>
             <div className=" text-[#ccd6f6] flex items-end">
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>02.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" >Work & Education</div>

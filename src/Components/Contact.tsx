@@ -1,9 +1,16 @@
 import ContactButton from "./ContactButton"
+import {useInView} from 'react-intersection-observer'
 
 function Contact() {
 
+    const [ref, inView, entry] = useInView({
+        root: null,
+        threshold: 0,
+        triggerOnce: true,
+    });
+
     return (
-        <div className='pt-8 min-h-screen xl:px-10 mt-5 flex flex-col items-center' id='contact'>
+        <div ref={ref} className={`pt-8 h-screen xl:px-10 mt-5 flex flex-col items-center opacity-0 ${inView ? 'animate-[fadeintranslatebottom_0.8s_ease_0.7s_forwards]' : ""}`} id='contact'>
             <div className="mt-5 tracking-wider text-[#64ffda]">04. What’s Next?</div>
             <div className="mt-8 text-3xl tracking-wider font-bold text-[#ccd6f6]">Get In Touch.</div>
             <div className="mt-8 text-lg tracking-wider text-[#8892b0] max-w-lg text-center">I’m currently looking for fulltime opportunities and my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you as soon as possible!</div>

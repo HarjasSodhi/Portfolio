@@ -22,7 +22,7 @@ function Projects() {
     }
 
     return (
-        <div className="pt-8 flex flex-col min-h-screen xl:px-8 mt-20" id='projects'>
+        <div className="pt-8 flex flex-col h-screen xl:px-8 mt-20" id='projects'>
             <div className=" text-[#ccd6f6] flex items-end">
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>03.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" >Some Things I’ve Built</div>
