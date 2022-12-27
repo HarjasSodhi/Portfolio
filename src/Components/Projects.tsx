@@ -25,7 +25,7 @@ function Projects() {
 
     const [ref4, inView4, entry4] = useInView({
         root: null,
-        threshold: 0.2,
+        threshold: 0.1,
         triggerOnce: true,
     });
 
@@ -107,7 +107,7 @@ function Projects() {
                 </div>
                 <a href='https://harjassodhi.github.io/Random-Color-Generator/' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/rcg.png" /></a>
             </div>
-            <div ref={ref4} className={`${inView4 ? 'animate-[fadeintranslatebottom_0.5s_ease_0.7s_forwards]' : ""} flex flex-col opacity-0 items-center xl:mt-24 lg:mt-36 md:mt-52 mt-8 font-bold`}>
+            <div ref={ref4} className={`${inView4 ? 'animate-[fadeintranslatebottom_1s_ease_0.7s_forwards]' : ""} flex flex-col opacity-0 items-center xl:mt-24 lg:mt-36 md:mt-52 mt-8 font-bold`}>
                 <div className="text-2xl text-[#ccd6f6]">Other Noteworthy Projects</div>
                 <div className={`mt-14 place-content-evenly w-full grid xl:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-5`}>
                     {

@@ -5,7 +5,7 @@ function Contact() {
 
     const [ref, inView, entry] = useInView({
         root: null,
-        threshold: 0.2,
+        threshold: 0.1,
         triggerOnce: true,
     });
 
