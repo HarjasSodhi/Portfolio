@@ -8,7 +8,7 @@ function Hero() {
     });
 
     return (
-        <div ref={ref} className={`text-white pt-16 h-screen`} >
+        <div ref={ref} className={`text-white pt-16`} >
             <div className={`${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.5s_forwards]' : ""} opacity-0 text-[#64ffda] tracking-widest`}>Hi, my name is</div>
             <div className={`name font-bold ${inView ? 'block' : "hidden"} opacity-0`}>Harjas Sodhi.</div>
             <div className={`${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_1.5s_forwards]' : ""} opacity-0 lg:text-7xl md:text-5xl text-3xl my-3 text-[#8892b0] font-bold`}>I build things for the web.</div>
