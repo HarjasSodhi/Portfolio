@@ -59,7 +59,7 @@ function Experience() {
 
 
     return (
-        <div ref={ref} className={`pt-8 flex flex-col xl:px-8 mt-20 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.5s_forwards]' : ""}`} id='experience'>
+        <div ref={ref} className={`min-h-screen pt-8 flex flex-col xl:px-8 mt-20 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.5s_forwards]' : ""}`} id='experience'>
             <div className=" text-[#ccd6f6] flex items-end">
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>02.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" >Work & Education</div>

@@ -1,8 +1,34 @@
 import ProjectCard from "./ProjectCard"
 import { proj } from '../types'
 import { useState, useEffect } from "react";
+import { useInView } from 'react-intersection-observer';
 
 function Projects() {
+
+    const [ref, inView, entry] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
+    const [ref2, inView2, entry2] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
+    const [ref3, inView3, entry3] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
+    const [ref4, inView4, entry4] = useInView({
+        root: null,
+        threshold: 0.3,
+        triggerOnce: true,
+    });
+
     let data: proj[] = [1, 2, 3, 4, 5, 6];
     useEffect(() => {
         function handleResize() {
@@ -22,13 +48,13 @@ function Projects() {
     }
 
     return (
-        <div className="pt-8 flex flex-col xl:px-8 mt-20" id='projects'>
-            <div className=" text-[#ccd6f6] flex items-end">
+        <div className={`pt-8 flex flex-col xl:px-8 mt-20`} id='projects'>
+            <div ref={ref} className={` text-[#ccd6f6] flex opacity-0 items-end ${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.2s_forwards]' : ""}`}>
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>03.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" >Some Things I’ve Built</div>
                 <div className="grow border border-gray-700 self-center lg:grow-0 lg:w-1/3 ml-5"></div>
             </div>
-            <div className="md:flex featured-card mt-20 relative">
+            <div ref={ref2} className={`md:flex featured-card mt-20 opacity-0 relative ${inView2 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
                 <a href='https://getchefd.netlify.app' target='_blank' className="md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black hidden"><img className="h-full w-full" src="/getChefd.png" /></a>
                 <div className="bg-[url('/getChefd.png')] md:bg-none p-8 md:p-0 md:grow md:text-right tracking-wider bg-[rgb(2,12,27)] opacity-80 md:opacity-100 md:bg-transparent rounded">
                     <a href='https://getchefd.netlify.app' target='_blank' className="flex flex-col md:items-end md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
@@ -56,7 +82,7 @@ function Projects() {
                 </div>
             </div>
 
-            <div className="md:flex featured-card relative xl:mt-44 lg:mt-60 md:mt-80 my-20">
+            <div ref={ref3} className={`md:flex featured-card relative opacity-0 xl:mt-44 lg:mt-60 md:mt-80 my-20 ${inView3 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
                 <div className="bg-[url('/rcg.png')] md:bg-none p-8 md:p-0 md:grow tracking-wider opacity:80 md:opacity-100 md:bg-transparent rounded">
                     <a href='https://harjassodhi.github.io/Random-Color-Generator/' target='_blank' className=" flex flex-col md:items-start md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
                         <div className='text-[#64ffda] text-sm tracking-wide mb-5'>Featured Project</div>
@@ -81,9 +107,9 @@ function Projects() {
                 </div>
                 <a href='https://harjassodhi.github.io/Random-Color-Generator/' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/rcg.png" /></a>
             </div>
-            <div className="flex flex-col items-center xl:mt-24 lg:mt-36 md:mt-52 mt-8 font-bold">
+            <div ref={ref4} className={`${inView4 ? 'animate-[fadeintranslatebottom_0.5s_ease_0.7s_forwards]' : ""} flex flex-col opacity-0 items-center xl:mt-24 lg:mt-36 md:mt-52 mt-8 font-bold`}>
                 <div className="text-2xl text-[#ccd6f6]">Other Noteworthy Projects</div>
-                <div className="mt-14 place-content-evenly w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                <div className={`mt-14 place-content-evenly w-full grid xl:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-5`}>
                     {
                         data.map((el, idx) => {
                             return <ProjectCard el={el} dis={disp || idx < dispSize} />

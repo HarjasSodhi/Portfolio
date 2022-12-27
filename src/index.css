@@ -47,7 +47,7 @@ body {
   animation-name: backanim, fadeintranslatebottom;
   animation-iteration-count: infinite, 1;
   animation-fill-mode: forwards, forwards;
-  animation-delay: 0s, 1s;
+  animation-delay: 0s, 3.2s;
   font-size: 5rem;
 }
 
