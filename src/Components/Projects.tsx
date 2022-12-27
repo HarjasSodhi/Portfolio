@@ -25,7 +25,7 @@ function Projects() {
 
     const [ref4, inView4, entry4] = useInView({
         root: null,
-        threshold: 0.3,
+        threshold: 0.2,
         triggerOnce: true,
     });
 
@@ -49,7 +49,7 @@ function Projects() {
 
     return (
         <div className={`pt-8 flex flex-col xl:px-8 mt-20`} id='projects'>
-            <div ref={ref} className={` text-[#ccd6f6] flex opacity-0 items-end ${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.2s_forwards]' : ""}`}>
+            <div ref={ref} className={` text-[#ccd6f6] flex opacity-0 items-end ${inView ? 'animate-[fadeintranslatebottom_0.5s_ease_0.5s_forwards]' : ""}`}>
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>03.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" >Some Things I’ve Built</div>
                 <div className="grow border border-gray-700 self-center lg:grow-0 lg:w-1/3 ml-5"></div>
