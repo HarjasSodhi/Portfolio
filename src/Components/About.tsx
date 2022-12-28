@@ -7,14 +7,20 @@ function About() {
         triggerOnce: true,
     });
 
+    const [ref2, inView2, entry2] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
     return (
-        <div ref={ref} className={`pt-8 2xl:mt-24 xl:px-10 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_1s_ease_0.5s_forwards]' : ""} mb-28`} id='about'>
+        <div ref={ref} className={`pt-8 2xl:mt-32 sm:mt-0 mt-32 xl:px-10 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_1s_ease_1s_forwards]' : ""} mb-28`} id='about'>
             <div className=" text-[#ccd6f6] flex items-end">
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>01.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" > About Me</div>
                 <div className="grow border border-gray-700 self-center lg:grow-0 lg:w-1/3 ml-5"></div>
             </div>
-            <div className="flex flex-col md:flex-row mt-8 text-[#8892b0] text-base md:text-lg items-center">
+            <div ref={ref2} className={`opacity-0 flex flex-col md:flex-row mt-8 text-[#8892b0] text-base md:text-lg items-center ${inView2 ? 'animate-[fadeintranslatebottom_0.5s_ease_0.5s_forwards]' : ""}`}>
                 <div className="md:w-3/5">
                     <p className="mt-4">
                         Hello! My name is Harjas and I enjoy creating things that live on the internet. My interest in web development started back in 2019 when I participated in a hackathon for the first time — turns out web-hackathons can teach you a lot about HTML, CSS & JS!

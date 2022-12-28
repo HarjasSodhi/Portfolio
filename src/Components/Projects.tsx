@@ -29,7 +29,51 @@ function Projects() {
         triggerOnce: true,
     });
 
-    let data: proj[] = [1, 2, 3, 4, 5, 6];
+    let data: proj[] = [
+        {
+            link: '',
+            github: '',
+            title: "",
+            description: "",
+            stack: ""
+        },
+        {
+            link: '',
+            github: '',
+            title: "",
+            description: "",
+            stack: ""
+        },
+        {
+            link: '',
+            github: '',
+            title: "",
+            description: "",
+            stack: ""
+        },
+        {
+            link: '',
+            github: '',
+            title: "",
+            description: "",
+            stack: ""
+        },
+        {
+            link: '',
+            github: '',
+            title: "",
+            description: "",
+            stack: ""
+        },
+        {
+            link: '',
+            github: '',
+            title: "",
+            description: "",
+            stack: ""
+        },
+    ];
+
     useEffect(() => {
         function handleResize() {
             if (window.innerWidth < 1280 && window.innerWidth > 640) setDispSize(2);
@@ -43,6 +87,7 @@ function Projects() {
 
     const [disp, setDisp] = useState(false)
     const [dispSize, setDispSize] = useState(window.innerWidth < 1280 && window.innerWidth > 640 ? 2 : 3);
+    
     function handleDisp() {
         setDisp(!disp);
     }
@@ -56,7 +101,7 @@ function Projects() {
             </div>
             <div ref={ref2} className={`md:flex featured-card mt-20 opacity-0 relative ${inView2 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
                 <a href='https://flywise.in/' target='_blank' className="md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black hidden"><img className="h-full w-full" src="/flywise.png" /></a>
-                <div className="bg-[url('/flywise-md.png')] md:bg-none p-8 md:p-0 md:grow md:text-right tracking-wider bg-[rgb(2,12,27)] opacity-80 md:opacity-100 md:bg-transparent rounded">
+                <div className="bg-[url('/flywisemd.png')] bg-contain md:bg-none p-8 md:p-0 md:grow md:text-right tracking-wider bg-[rgb(2,12,27)] opacity-80 md:opacity-100 md:bg-transparent rounded">
                     <a href='https://flywise.in/' target='_blank' className="flex flex-col md:items-end md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
                         <div className='text-[#64ffda] text-sm tracking-wide mb-5'>Featured Project</div>
                         <div className="inline un">Flywise</div>

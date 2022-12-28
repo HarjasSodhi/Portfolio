@@ -8,5 +8,9 @@ export type exp = {
 }
 
 export type proj = {
-    
+    link: string,
+    github: string,
+    title: string,
+    description: string,
+    stack: string
 }
