@@ -14,7 +14,7 @@ function About() {
     });
 
     return (
-        <div ref={ref} className={`pt-8 2xl:mt-32 sm:mt-0 mt-5 xl:px-10 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_1s_ease_1s_forwards]' : ""} mb-28`} id='about'>
+        <div ref={ref} className={`pt-8 2xl:mt-24 sm:mt-0 mt-5 xl:px-10 opacity-0 ${inView ? 'animate-[fadeintranslatebottom_1s_ease_1s_forwards]' : ""} mb-28`} id='about'>
             <div className=" text-[#ccd6f6] flex items-end">
                 <span className='text-[#64ffda] text-md md:text-lg lg:text-xl'>01.</span>
                 <div className="pl-5 text-xl md:text-2xl lg:text-3xl font-bold" > About Me</div>

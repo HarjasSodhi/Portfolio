@@ -29,49 +29,76 @@ function Projects() {
         triggerOnce: true,
     });
 
+    const [ref5, inView5, entry5] = useInView({
+        root: null,
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
     let data: proj[] = [
         {
-            link: '',
-            github: '',
-            title: "",
+            link: 'https://dndtypestodo.netlify.app/',
+            github: 'https://github.com/HarjasSodhi/Typescript-React-TodoList-DragnDrop',
+            title: "Drag n Drop To-Do List",
             description: "",
             stack: ""
         },
         {
             link: '',
             github: '',
-            title: "",
+            title: "Goorooit",
             description: "",
             stack: ""
         },
         {
             link: '',
-            github: '',
-            title: "",
+            github: 'https://github.com/HarjasSodhi/Puppeteer-Automation-TwitterMarketingTool',
+            title: "Twitter Marketing Tool",
             description: "",
             stack: ""
         },
         {
             link: '',
-            github: '',
-            title: "",
+            github: 'https://github.com/HarjasSodhi/Portfolio',
+            title: "Dev Portfolio",
+            description: "",
+            stack: ""
+        },
+        {
+            link: 'https://github.com/HarjasSodhi/JiraClone-to-doList',
+            github: 'https://github.com/HarjasSodhi/JiraClone-to-doList',
+            title: "Jira Clone",
+            description: "",
+            stack: ""
+        },
+        {
+            link: 'https://harjassodhi.github.io/MS-Excel-Google-Sheets-Clone/',
+            github: 'https://github.com/HarjasSodhi/MS-Excel-Google-Sheets-Clone',
+            title: "Google Sheets Clone",
+            description: "",
+            stack: ""
+        },
+        {
+            link: 'https://harjassodhi.github.io/Random-Color-Generator/',
+            github: 'https://github.com/HarjasSodhi/Random-Color-Generator',
+            title: "Random Color Generator",
+            description: "",
+            stack: ""
+        },
+        {
+            link: 'https://harjassodhi.github.io/Camera-Web-App/',
+            github: 'https://github.com/HarjasSodhi/Camera-Web-App',
+            title: "WebCam Tool",
             description: "",
             stack: ""
         },
         {
             link: '',
-            github: '',
-            title: "",
+            github: 'https://github.com/HarjasSodhi/Designer-Landing-Page-Mockup',
+            title: "Sample Landing Page",
             description: "",
             stack: ""
-        },
-        {
-            link: '',
-            github: '',
-            title: "",
-            description: "",
-            stack: ""
-        },
+        }
     ];
 
     useEffect(() => {
@@ -87,7 +114,7 @@ function Projects() {
 
     const [disp, setDisp] = useState(false)
     const [dispSize, setDispSize] = useState(window.innerWidth < 1280 && window.innerWidth > 640 ? 2 : 3);
-    
+
     function handleDisp() {
         setDisp(!disp);
     }
@@ -107,7 +134,7 @@ function Projects() {
                         <div className="inline un">Flywise</div>
                     </a>
                     <div className="md:absolute right-0 md:z-10 md:w-1/2 my-5 text-[#a8b2d1] md:text-right" >
-                        <div className="md:p-5 md:shadow-md shadow-black md:bg-[rgb(2,12,27)] md:opacity-90 md:text-[#a8b2d1] text-[#ccd6f6] text-sm">Developed At <a href="https://kyloapps.com" target='_blank' className="text-[#64ffda] un">Kylo Apps. </a>
+                        <div className="md:p-5 md:shadow-md shadow-black md:bg-[rgb(2,12,27)] md:opacity-90 md:text-[#a8b2d1] text-[#ccd6f6] text-sm">Developed At <a href="https://kyloapps.com" target='_blank' className="text-[#64ffda] un">Kylo Apps. </a> <br />
                             Implemented backend functionality for <span className="text-[#64ffda] un"> CRUD, Searching, Sorting and Filtering </span>of University, Courses and Blogs data on the basis of <span className="text-[#64ffda] un">10+</span> attributes among <span className="text-[#64ffda] un">1000+</span> data entries.
                         </div>
                         <div className="text-[#64ffda] mt-5 flex md:justify-end flex-wrap text-sm tracking-wider">
@@ -125,7 +152,7 @@ function Projects() {
                 </div>
             </div>
 
-            <div ref={ref3} className={`md:flex featured-card relative opacity-0 xl:mt-44 lg:mt-60 md:mt-80 my-20 ${inView3 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
+            <div ref={ref3} className={`md:flex featured-card relative opacity-0 xl:mt-44 lg:mt-60 md:mt-80 mt-20 mb-10 ${inView3 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
                 <div className="bg-[url('/getChefd.png')] md:bg-none p-8 md:p-0 md:grow tracking-wider opacity:80 md:opacity-100 md:bg-transparent rounded">
                     <a href='https://getchefd.netlify.app' target='_blank' className=" flex flex-col md:items-start md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
                         <div className='text-[#64ffda] text-sm tracking-wide mb-5'>Featured Project</div>
@@ -152,6 +179,35 @@ function Projects() {
                 </div>
                 <a href='https://github.com/HarjasSodhi/GetChef-d---MERN-Stack' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/getChefd.png" /></a>
             </div>
+
+            <div ref={ref5} className={`md:flex featured-card relative opacity-0 xl:mt-44 lg:mt-60 md:mt-80 my-20 ${inView5 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
+                <a href='https://harjassodhi.github.io/React-GameHub-project/' target='_blank' className="md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black hidden"><img className="h-full w-full" src="/gamehub.png" /></a>
+                <div className="bg-[url('/gamehubmd.png')] md:bg-none p-8 md:p-0 md:grow md:text-right tracking-wider bg-[rgb(2,12,27)] opacity-80 md:opacity-100 md:bg-transparent rounded">
+                    <a href='https://harjassodhi.github.io/React-GameHub-project/' target='_blank' className="flex flex-col md:items-end md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
+                        <div className='text-[#64ffda] text-sm tracking-wide mb-5'>Featured Project</div>
+                        <div className="inline un">GameHub</div>
+                    </a>
+                    <div className="md:absolute right-0 md:z-10 md:w-1/2 my-5 text-[#a8b2d1] md:text-right" >
+                        <div className="md:p-5 md:shadow-md shadow-black md:bg-[rgb(2,12,27)] md:opacity-90 md:text-[#a8b2d1] text-[#ccd6f6] text-sm">
+                            A Web App of collection of popular games like <span className="text-[#64ffda] un">Tic-tac-toe, Match-it , High-Low and Sudoku </span> with features like error detection and highlighting made from scratch.
+                        </div>
+                        <div className="text-[#64ffda] mt-5 flex md:justify-end flex-wrap text-sm tracking-wider">
+                            <div className="md:ml-4">React.JS</div>
+                            <div className="ml-4">HTML</div>
+                            <div className="ml-4">CSS</div>
+                        </div>
+                        <div className="md:justify-end text-[#a8b2d1] mt-8 inline-block p-5 md:border-b-4 border-white hover:border-[#64ffda] transition">
+                            <a href="https://github.com/HarjasSodhi/React-GameHub-project" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
+                                <i className="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://harjassodhi.github.io/React-GameHub-project/" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
+                                <i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div ref={ref4} className={`${inView4 ? 'animate-[fadeintranslatebottom_1s_ease_0.7s_forwards]' : ""} flex flex-col opacity-0 items-center xl:mt-24 lg:mt-36 md:mt-52 mt-8 font-bold`}>
                 <div className="text-2xl text-[#ccd6f6] text-center">Other Noteworthy Projects</div>
                 <div className={`mt-14 place-content-evenly w-full grid xl:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-5`}>
