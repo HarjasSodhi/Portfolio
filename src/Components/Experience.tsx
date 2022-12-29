@@ -33,7 +33,7 @@ function Experience() {
             link: "https://pepcoding.com",
             startDate: "March 2021",
             endDate: "December 2021",
-            bullets: ["Gained exposure to various Data-Structures and Algorithms and methodoligies used in software development", "Attained proficiency in Web Development using MERN stack and other web technologies"]
+            bullets: ["Gained exposure to various Data-Structures and Algorithms and methodologies used in software development", "Attained proficiency in Web Development using MERN stack and other web technologies", "Provide doubt resolution support to freshers"]
         },
         {
             position: "B.Tech Undergrad (Computer Science Engineering)",

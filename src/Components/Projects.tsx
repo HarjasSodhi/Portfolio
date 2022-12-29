@@ -40,64 +40,62 @@ function Projects() {
             link: 'https://dndtypestodo.netlify.app/',
             github: 'https://github.com/HarjasSodhi/Typescript-React-TodoList-DragnDrop',
             title: "Drag n Drop To-Do List",
-            description: "",
-            stack: ""
+            description: "A Drag and Drop To-Do list with persistent data that gets stored in browser's local storage",
+            stack: "Typescript, React.JS, CSS, React-Beautiful-DND"
         },
         {
-            link: '',
-            github: '',
             title: "Goorooit",
-            description: "",
-            stack: ""
+            description: "Developed at Kylo Apps. Created the entire backend for an app where professionals can register their skills and list their meeting price and aspirants can search them can pay for the meeting on the app. The payment automatically gets split into app owner's commission and professional's cut and meeting link is generated on the fly and sent to both the parties. Implemented other features like referral system, reviews, Q&A forums etc. Not yet in production.",
+            stack: "Node.JS, Express.JS, MongoDB, Razorpay, Google-Cloud"
         },
         {
-            link: '',
+            link: 'https://www.linkedin.com/posts/harjas-sodhi-ab985317a_web-automation-hackathon-activity-6797120024126611456-b1at?utm_source=share&utm_medium=member_desktop',
             github: 'https://github.com/HarjasSodhi/Puppeteer-Automation-TwitterMarketingTool',
             title: "Twitter Marketing Tool",
-            description: "",
-            stack: ""
+            description: "A tool made for helping service providers automate the task of cold messaging prospective clients on twitter. The tool finds clients by analyzing the tweets for keywords provided to it and then sends the provided message to all suitable accounts hence saving time",
+            stack: "NodeJS, Puppeteer.JS"
         },
         {
-            link: '',
+            link: 'https://harjassodhi.com',
             github: 'https://github.com/HarjasSodhi/Portfolio',
             title: "Dev Portfolio",
-            description: "",
-            stack: ""
+            description: "My Developer Portfolio",
+            stack: "React.JS, Typescript, Tailwind.CSS"
         },
         {
             link: 'https://github.com/HarjasSodhi/JiraClone-to-doList',
             github: 'https://github.com/HarjasSodhi/JiraClone-to-doList',
             title: "Jira Clone",
-            description: "",
-            stack: ""
+            description: "A minimalistic JIRA clone with features like issuing tickets, deleting tickets, recycle bin, changing priorities, search and dark mode.",
+            stack: "HTML, CSS, Javascript"
         },
         {
             link: 'https://harjassodhi.github.io/MS-Excel-Google-Sheets-Clone/',
             github: 'https://github.com/HarjasSodhi/MS-Excel-Google-Sheets-Clone',
             title: "Google Sheets Clone",
-            description: "",
-            stack: ""
+            description: "A google sheets clone with features like cell targeted formulas(which keep the value of the targeted cell updated even if the parent cell value changes), applying styles and formatting, saving sheets in localstorage, creating new sheets etc.",
+            stack: "HTML, CSS, Javscript"
         },
         {
             link: 'https://harjassodhi.github.io/Random-Color-Generator/',
             github: 'https://github.com/HarjasSodhi/Random-Color-Generator',
             title: "Random Color Generator",
-            description: "",
-            stack: ""
+            description: "A web app to generate infinite number random colors and gradients on the basis of generating a new HEX value each time. The CSS code is also generated each time and copied to the clipboard.",
+            stack: "HTML, Javascript, CSS"
         },
         {
             link: 'https://harjassodhi.github.io/Camera-Web-App/',
             github: 'https://github.com/HarjasSodhi/Camera-Web-App',
             title: "WebCam Tool",
-            description: "",
-            stack: ""
+            description: "A web app that allows users to capture and download photographs and record videos using their webcams and apply filters to those photos.",
+            stack: "HTML, Javascript, CSS, Mediastream APIs"
         },
         {
-            link: '',
+            link: 'https://uimockup.netlify.app/',
             github: 'https://github.com/HarjasSodhi/Designer-Landing-Page-Mockup',
-            title: "Sample Landing Page",
-            description: "",
-            stack: ""
+            title: "CxMax",
+            description: "A sample landing page for a business website with a lot of interactivity, complete responsiveness and components like carousels etc.",
+            stack: "HTML, CSS, Javascript"
         }
     ];
 
