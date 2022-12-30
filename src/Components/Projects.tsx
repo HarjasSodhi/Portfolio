@@ -165,7 +165,7 @@ function Projects() {
                         </div>
                     </div>
                 </div>
-                <a href='https://github.com/HarjasSodhi/GetChef-d---MERN-Stack' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/getChefd.png" /></a>
+                <a href='https://getchefd.netlify.app/' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/getChefd.png" /></a>
             </div>
 
             <div ref={ref5} className={`md:flex featured-card relative opacity-0 xl:mt-44 lg:mt-60 md:mt-80 my-20 ${inView5 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
