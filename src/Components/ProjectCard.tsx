@@ -1,5 +1,4 @@
 import { proj } from "../types"
-import parse from 'html-react-parser';
 
 type propType = {
   el: proj,
@@ -17,7 +16,7 @@ function ProjectCard(props: propType) {
         </div>
       </div>
       <div className="proj-title mt-4 md:text-2xl text-xl text-[#ccd6f6] transition card-name">{props.el.title}</div>
-      <div className="mt-3 text-[#8892b0] font-normal grow">{parse(props.el.description)}</div>
+      <div className="mt-3 text-[#8892b0] font-normal grow">{props.el.description}</div>
       <div className="mt-8 text-[#a8b2d1] text-[12px] tracking-wider">{props.el.stack}</div>
     </a>
   )
