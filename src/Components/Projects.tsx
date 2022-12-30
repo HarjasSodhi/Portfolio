@@ -14,7 +14,7 @@ let data: proj[] = [
     },
     {
         title: "Goorooit",
-        description: parse("Developed at <a href='https://kyloapps.com' target='_blank' className='un text-[#64ffda]'>Kylo Apps</a>. Created the entire backend for an app where <span className='text-[#64ffda]'>professionals can register their skills and list their meeting price and aspirants can search them can pay for the meeting on the app</span>. The payment automatically gets split into app owner's commission and professional's cut and <span className='text-[#64ffda]'>meeting link is generated on the fly and sent to both the parties</span>. Implemented other features like referral system, reviews, Q&A forums etc. Not yet in production.") as string,
+        description: parse("Developed at <a href='https://kyloapps.com' target='_blank' className='un text-[#64ffda]'>Kylo Apps</a>. Created the entire backend for an app where <span className='text-[#64ffda]'>professionals can register their skills and list their meeting price and aspirants can search them can pay for the meeting on the app</span>. The payment automatically gets split into app owner's commission and professional's cut and <span className='text-[#64ffda]'>meeting link is generated on the fly and sent to both the parties</span>. Implemented other features like referral system, reviews, Q&A forums etc. <span className='text-[#64ffda]'>Not yet in production.</span>") as string,
         stack: "Node.JS, Express.JS, MongoDB, Razorpay, Google-Cloud"
     },
     {
