@@ -13,11 +13,9 @@ let data: proj[] = [
         stack: "NodeJS, Puppeteer.JS"
     },
     {
-        link: 'https://harjassodhi.github.io/Random-Color-Generator/',
-        github: 'https://github.com/HarjasSodhi/Random-Color-Generator',
-        title: "Random Color Generator",
-        description: parse("A web app to generate <span className='text-[#64ffda]'>infinite number random colors and gradients</span> on the basis of generating a new HEX value each time. <span className='text-[#64ffda]'>The CSS code is also generated</span> each time and copied to the clipboard.") as string,
-        stack: "HTML, Javascript, CSS"
+        title: "Goorooit",
+        description: parse("Developed at <a href='https://kyloapps.com' target='_blank' className='un text-[#64ffda]'>Kylo Apps</a>. Created the entire backend for an app where <span className='text-[#64ffda]'>professionals can register their skills and list their meeting price and aspirants can search them can pay for the meeting on the app</span>. The payment automatically gets split into app owner's commission and professional's cut and <span className='text-[#64ffda]'>meeting link is generated on the fly and sent to both the parties</span>. Implemented other features like referral system, reviews, Q&A forums etc. Not yet in production.") as string,
+        stack: "Node.JS, Express.JS, MongoDB, Razorpay, Google-Cloud"
     },
     {
         link: 'https://harjassodhi.github.io/MS-Excel-Google-Sheets-Clone/',
@@ -27,9 +25,18 @@ let data: proj[] = [
         stack: "HTML, CSS, Javscript"
     },
     {
-        title: "Goorooit",
-        description: parse("Developed at <a href='https://kyloapps.com' target='_blank' className='un text-[#64ffda]'>Kylo Apps</a>. Created the entire backend for an app where <span className='text-[#64ffda]'>professionals can register their skills and list their meeting price and aspirants can search them can pay for the meeting on the app</span>. The payment automatically gets split into app owner's commission and professional's cut and <span className='text-[#64ffda]'>meeting link is generated on the fly and sent to both the parties</span>. Implemented other features like referral system, reviews, Q&A forums etc. Not yet in production.") as string,
-        stack: "Node.JS, Express.JS, MongoDB, Razorpay, Google-Cloud"
+        link: 'https://harjassodhi.github.io/Random-Color-Generator/',
+        github: 'https://github.com/HarjasSodhi/Random-Color-Generator',
+        title: "Random Color Generator",
+        description: parse("A web app to generate <span className='text-[#64ffda]'>infinite number random colors and gradients</span> on the basis of generating a new HEX value each time. <span className='text-[#64ffda]'>The CSS code is also generated</span> each time and copied to the clipboard.") as string,
+        stack: "HTML, Javascript, CSS"
+    },
+    {
+        link: 'https://harjassodhi.github.io/Camera-Web-App/',
+        github: 'https://github.com/HarjasSodhi/Camera-Web-App',
+        title: "WebCam Tool",
+        description: parse("A web app that allows users to <span className='text-[#64ffda]'>capture and download photographs and record videos using their webcams and apply filters to those photos.</span>") as string,
+        stack: "HTML, Javascript, CSS, Mediastream APIs"
     },
     {
         link: 'https://dndtypestodo.netlify.app/',
@@ -46,18 +53,11 @@ let data: proj[] = [
         stack: "HTML, CSS, Javascript"
     },
     {
-        link: 'https://github.com/HarjasSodhi/JiraClone-to-doList',
+        link: 'https://harjassodhi.github.io/JiraClone-to-doList/',
         github: 'https://github.com/HarjasSodhi/JiraClone-to-doList',
         title: "Jira Clone",
         description: parse("A minimalistic JIRA clone with features like <span className='text-[#64ffda]'>issuing tickets, deleting tickets, recycle bin, changing priorities, search and dark mode.</span>") as string,
         stack: "HTML, CSS, Javascript"
-    },
-    {
-        link: 'https://harjassodhi.github.io/Camera-Web-App/',
-        github: 'https://github.com/HarjasSodhi/Camera-Web-App',
-        title: "WebCam Tool",
-        description: parse("A web app that allows users to <span className='text-[#64ffda]'>capture and download photographs and record videos using their webcams and apply filters to those photos.</span>") as string,
-        stack: "HTML, Javascript, CSS, Mediastream APIs"
     },
     {
         link: 'https://harjassodhi.com',
