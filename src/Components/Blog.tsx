@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams, useNavigate } from 'react-router-dom'
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import Loader from "./Loader";
+import ReactGA from 'react-ga';
 
 function Blog() {
     const [md, setMd] = useState('');
@@ -9,6 +10,9 @@ function Blog() {
     const navigate = useNavigate();
     const name = useParams().name?.split('_').join(" ");
     useEffect(() => {
+        ReactGA.initialize(import.meta.env.VITE_trackingKey);
+        ReactGA.pageview(window.location.pathname + window.location.search);
+        
         fetch('/blog/' + name + '.md')
             .then((data => {
                 if (!data.ok) {

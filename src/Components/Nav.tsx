@@ -1,8 +1,20 @@
 import { useState, useRef, useEffect } from "react"
+import ReactGA from 'react-ga';
+
+function handleAnaClick(title: string) {
+    ReactGA.initialize(import.meta.env.VITE_trackingKey);
+    return () => {
+        ReactGA.event({
+            category: title,
+            action: "click"
+        })
+    }
+}
 
 function Nav() {
     const [vis, setVis] = useState(false);
     const [scroll, setScroll] = useState(window.scrollY);
+
 
     function handleVis() {
         setVis(!vis);
@@ -55,7 +67,7 @@ function Nav() {
                 <div className="md:opacity-0 md:animate-[fadeintranslate_0.5s_ease_1.6s_forwards] link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">03. </span><a className="font-bold" href="#projects">Projects</a></div>
                 <div className="md:opacity-0 md:animate-[fadeintranslate_0.5s_ease_1.8s_forwards] link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">04. </span><a className="font-bold" href="#blogs">Blogs</a></div>
                 <div className="md:opacity-0 md:animate-[fadeintranslate_0.5s_ease_2s_forwards] link m-3 hover:text-[#64ffda] transition ease 0.5s text-center" onClick={handleSectionClick}><span className="text-[#64ffda] block md:inline">05. </span><a className="font-bold" href="#contact">Contact</a></div>
-                <div className="md:opacity-0 md:animate-[fadeintranslate_0.5s_ease_2.2s_forwards] link m-3 text-[#64ffda]" onClick={handleSectionClick}><a className="resume-btn font-bold border border-[#64ffda] rounded px-5 py-2 hover:bg-gray-700 transition ease 0.5s" href="/Harjas-Sodhi-Resume.pdf" target='_blank'>Resume</a></div>
+                <div className="md:opacity-0 md:animate-[fadeintranslate_0.5s_ease_2.2s_forwards] link m-3 text-[#64ffda]" onClick={handleSectionClick}><a className="resume-btn font-bold border border-[#64ffda] rounded px-5 py-2 hover:bg-gray-700 transition ease 0.5s" onClick={handleAnaClick('resume')} href="/Harjas-Sodhi-Resume.pdf" target='_blank'>Resume</a></div>
             </div>
         </div>
     )

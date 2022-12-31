@@ -3,6 +3,7 @@ import { proj } from '../types'
 import { useState, useEffect } from "react";
 import { useInView } from 'react-intersection-observer';
 import parse from 'html-react-parser';
+import ReactGA from 'react-ga';
 
 let data: proj[] = [
     {
@@ -64,9 +65,20 @@ let data: proj[] = [
         github: 'https://github.com/HarjasSodhi/Portfolio',
         title: "Dev Portfolio",
         description: "My Developer Portfolio",
-        stack: "React.JS, Typescript, Tailwind.CSS"
+        stack: "React.JS, Typescript, Tailwind.CSS, Google Analytics"
     }
 ];
+
+
+function handleAnaClick(title: string) {
+    ReactGA.initialize(import.meta.env.VITE_trackingKey);
+    return () => {
+        ReactGA.event({
+            category: title,
+            action: "click"
+        })
+    }
+}
 
 function Projects() {
 
@@ -115,9 +127,9 @@ function Projects() {
                 <div className="grow border border-gray-700 self-center lg:grow-0 lg:w-1/3 ml-5"></div>
             </div>
             <div ref={ref2} className={`md:flex featured-card mt-20 opacity-0 relative ${inView2 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
-                <a href='https://flywise.in/' target='_blank' className="md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black hidden"><img className="h-full w-full" src="/flywise.png" /></a>
+                <a onClick={handleAnaClick("Project flywise")} href='https://flywise.in/' target='_blank' className="md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black hidden"><img className="h-full w-full" src="/flywise.png" /></a>
                 <div className="bg-[url('/flywisemd.png')] bg-contain md:bg-none p-8 md:p-0 md:grow md:text-right tracking-wider bg-[rgb(2,12,27)] opacity-80 md:opacity-100 md:bg-transparent rounded">
-                    <a href='https://flywise.in/' target='_blank' className="flex flex-col md:items-end md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
+                    <a onClick={handleAnaClick("Project flywise")} href='https://flywise.in/' target='_blank' className="flex flex-col md:items-end md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
                         <div className='text-[#64ffda] text-sm tracking-wide mb-5'>Featured Project</div>
                         <div className="inline un">Flywise</div>
                     </a>
@@ -132,7 +144,7 @@ function Projects() {
                             <div className="ml-4">Cloudinary</div>
                         </div>
                         <div className="md:justify-end text-[#a8b2d1] mt-8 inline-block p-5 md:border-b-4 border-white hover:border-[#64ffda] transition">
-                            <a href="https://flywise.in/" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
+                            <a onClick={handleAnaClick("Project flywise")} href="https://flywise.in/" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
                                 <i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
@@ -142,7 +154,7 @@ function Projects() {
 
             <div ref={ref3} className={`md:flex featured-card relative opacity-0 xl:mt-44 lg:mt-60 md:mt-80 mt-20 mb-10 ${inView3 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
                 <div className="bg-[url('/getChefd.png')] md:bg-none p-8 md:p-0 md:grow tracking-wider opacity:80 md:opacity-100 md:bg-transparent rounded">
-                    <a href='https://getchefd.netlify.app' target='_blank' className=" flex flex-col md:items-start md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
+                    <a onClick={handleAnaClick("Project getchefd")} href='https://getchefd.netlify.app' target='_blank' className=" flex flex-col md:items-start md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
                         <div className='text-[#64ffda] text-sm tracking-wide mb-5'>Featured Project</div>
                         <div className="inline un">GetChef'd</div>
                     </a>
@@ -156,22 +168,22 @@ function Projects() {
                             <div className="mr-4">Razorpay</div>
                         </div>
                         <div className="text-[#a8b2d1] mt-8 md:border-b-4 border-white inline-block p-5 hover:border-[#64ffda] transition">
-                            <a href="https://github.com/HarjasSodhi/GetChef-d---MERN-Stack" target='_blank' className="text-2xl md:m-2 hover:text-[#64ffda] transition ease">
+                            <a onClick={handleAnaClick("github getchefd")} href="https://github.com/HarjasSodhi/GetChef-d---MERN-Stack" target='_blank' className="text-2xl md:m-2 hover:text-[#64ffda] transition ease">
                                 <i className="fa-brands fa-github"></i>
                             </a>
-                            <a href="https://getchefd.netlify.app" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
+                            <a onClick={handleAnaClick("Project getchefd")} href="https://getchefd.netlify.app" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
                                 <i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <a href='https://getchefd.netlify.app/' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/getChefd.png" /></a>
+                <a onClick={handleAnaClick("Project getchefd")} href='https://getchefd.netlify.app/' target='_blank' className="hidden md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black"><img className="h-full w-full" src="/getChefd.png" /></a>
             </div>
 
             <div ref={ref5} className={`md:flex featured-card relative opacity-0 xl:mt-44 lg:mt-60 md:mt-80 my-20 ${inView5 ? 'animate-[fadeintranslatebottom_0.7s_ease_0.5s_forwards]' : ""}`}>
-                <a href='https://harjassodhi.github.io/React-GameHub-project/' target='_blank' className="md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black hidden"><img className="h-full w-full" src="/gamehub.png" /></a>
+                <a onClick={handleAnaClick("Project gamehub")} href='https://harjassodhi.github.io/React-GameHub-project/' target='_blank' className="md:block h-full rounded md:w-2/3 md:aspect-video shadow-lg shadow-black hidden"><img className="h-full w-full" src="/gamehub.png" /></a>
                 <div className="bg-[url('/gamehubmd.png')] md:bg-none p-8 md:p-0 md:grow md:text-right tracking-wider bg-[rgb(2,12,27)] opacity-80 md:opacity-100 md:bg-transparent rounded">
-                    <a href='https://harjassodhi.github.io/React-GameHub-project/' target='_blank' className="flex flex-col md:items-end md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
+                    <a onClick={handleAnaClick("Project gamehub")} href='https://harjassodhi.github.io/React-GameHub-project/' target='_blank' className="flex flex-col md:items-end md:text-3xl text-2xl text-[#ccd6f6] font-bold mt-3 hover:text-[#64ffda] transition ease" >
                         <div className='text-[#64ffda] text-sm tracking-wide mb-5'>Featured Project</div>
                         <div className="inline un">GameHub</div>
                     </a>
@@ -185,10 +197,10 @@ function Projects() {
                             <div className="ml-4">CSS</div>
                         </div>
                         <div className="md:justify-end text-[#a8b2d1] mt-8 inline-block p-5 md:border-b-4 border-white hover:border-[#64ffda] transition">
-                            <a href="https://github.com/HarjasSodhi/React-GameHub-project" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
+                            <a onClick={handleAnaClick("github gamehub")} href="https://github.com/HarjasSodhi/React-GameHub-project" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
                                 <i className="fa-brands fa-github"></i>
                             </a>
-                            <a href="https://harjassodhi.github.io/React-GameHub-project/" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
+                            <a onClick={handleAnaClick("Project gamehub")} href="https://harjassodhi.github.io/React-GameHub-project/" target='_blank' className="text-2xl md:m-2 ml-3 hover:text-[#64ffda]">
                                 <i className="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
